@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title>登录2</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			form {
+				display: block;
+				margin: 30px auto;
+			}
+			
+			img {
+				margin-left: 10px;
+			}
+			
+			.btn-submit {
+				display: block;
+				margin: 20px auto;
+				width: 200px;
+				height: 40px;
+				letter-spacing: 10px;
+				font-size: 18px;
+			}
+			
+			.title {
+				text-align: center;
+				margin: 5px;
+				font-size: 20px;
+			}
+			
+			.form-body{
+				width: 50%;
+				margin: 0 auto;
+			}
+			
+			.item{
+				margin: 12px 0;
+				text-align: center;
+			}
+			
+			.myimg{
+				display: block;
+				margin: 10px auto;
+			}
+			label{
+				display: inline-block;
+				width: 65px;
+				white-space: pre;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form action="handle_login2.php" method="post">
+			<p class="title">用户登陆2</p>
+			<div class="form-body">
+				<p class="item">
+					<label for="">用户名：</label><input type="text" name="username" />
+				</p>
+				<p class="item">
+					<label for="">密   码：</label><input type="password" name="password" />
+				</p>
+				<p class="item">
+					<label for="">验证码：</label><input type="text" name="imgcode" />
+				</p>
+				<img class="myimg" src="code.php" width="200px" height="30px">
+			</div>
+			<input class="btn-submit" type="submit" name="button" value="登录">
+			<!--login as admin-->
+		</form>
+	</body>
+
+</html>

